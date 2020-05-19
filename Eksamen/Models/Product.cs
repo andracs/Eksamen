@@ -11,6 +11,7 @@ namespace Eksamen.Models
     public class Product
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
 
@@ -22,7 +23,7 @@ namespace Eksamen.Models
 
         public string Description { get; set; }
 
-        public int ProductImage { get; set; }
+        public int ProductImageId { get; set; }
 
     }
 

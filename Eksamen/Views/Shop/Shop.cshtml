@@ -1,6 +1,19 @@
-﻿@{
+﻿@model IEnumerable<Eksamen.Models.Product>;
+
+
+@{
     ViewData["Title"] = "Products";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>List of products</p>
+
+@foreach (var item in Model)
+{
+    <div>
+        @item.Name
+        @item.Category
+        <hr />
+    </div>
+}
+
