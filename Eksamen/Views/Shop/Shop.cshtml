@@ -1,5 +1,4 @@
-﻿@model IEnumerable<Eksamen.Models.Product>;
-
+@model List<Product>
 
 @{
     ViewData["Title"] = "Products";
@@ -8,11 +7,10 @@
 
 <p>List of products</p>
 
-@foreach (var item in Model)
+@foreach (var product in Model)
 {
     <div>
-        @item.Name
-        @item.Category
+        @product.Name - @product.Price
         <hr />
     </div>
 }
